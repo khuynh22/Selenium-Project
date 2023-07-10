@@ -13,6 +13,10 @@ public class SelProject implements WebDriver {
 		System.setProperty("webdriver.chrome.driver", "/Users/khangnguyenhuynh/Desktop/Selenium/chromedriver_mac_arm64/chromedriver");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.khang-nguyen-huynh.com/");
+		System.out.println(driver.getTitle());
+		System.out.println(driver.getCurrentUrl());
+		driver.close();
+		driver.quit();
 	}
 
 }

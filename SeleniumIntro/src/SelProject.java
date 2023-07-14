@@ -1,5 +1,6 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class SelProject implements WebDriver {
@@ -19,8 +20,12 @@ public class SelProject implements WebDriver {
 		// Firefox Launch
 		// geckodriver
 
-		System.setProperty("webdriver.gecko.driver", "/Users/khangnguyenhuynh/Downloads/geckodriver");
-		WebDriver driver = new FirefoxDriver();
+//		System.setProperty("webdriver.gecko.driver", "/Users/khangnguyenhuynh/Downloads/geckodriver");
+//		WebDriver driver = new FirefoxDriver();
+		
+		// Microsoft Edge
+		System.setProperty("webdriver.gecko.driver", "/Users/khangnguyenhuynh/Desktop/Selenium/msedgedriver");
+		WebDriver driver = new EdgeDriver();
 
 		driver.get("https://www.khang-nguyen-huynh.com/");
 		System.out.println(driver.getTitle());

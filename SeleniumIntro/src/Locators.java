@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Locators {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver",
 				"/Users/khangnguyenhuynh/Desktop/Selenium/chromedriver_mac_arm64/chromedriver");
 
@@ -20,6 +20,9 @@ public class Locators {
 		driver.findElement(By.className("signInBtn")).click();
 		System.out.println(driver.findElement(By.cssSelector("p.error")).getText());
 		driver.findElement(By.linkText("Forgot your password?")).click();
+		
+		Thread.sleep(1000);
+		
 		driver.findElement(By.xpath("//input[@placeholder = 'Name']")).sendKeys("timhuynh");
 		driver.findElement(By.cssSelector("input[placeholder = 'Email']")).sendKeys("timhuynhwork@gg.com");
 		driver.findElement(By.xpath("//input[@type = 'text'][2]")).clear();

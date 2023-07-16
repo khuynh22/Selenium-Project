@@ -3,6 +3,8 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 
 public class Locators2 {
@@ -10,11 +12,17 @@ public class Locators2 {
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		String name = "rahul";
-		System.setProperty("webdriver.chrome.driver",
-				"/Users/khangnguyenhuynh/Desktop/Selenium/chromedriver_mac_arm64/chromedriver");
+//		System.setProperty("webdriver.chrome.driver",
+//				"/Users/khangnguyenhuynh/Desktop/Selenium/chromedriver_mac_arm64/chromedriver");
 
+//		System.setProperty("webdriver.gecko.driver", "/Users/khangnguyenhuynh/Downloads/geckodriver");
+//		WebDriver driver = new FirefoxDriver();
+
+		System.setProperty("webdriver.gecko.driver", "/Users/khangnguyenhuynh/Desktop/Selenium/msedgedriver");
+		WebDriver driver = new EdgeDriver();
+		
 		// implicit wait
-		WebDriver driver = new ChromeDriver();
+//		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		String password = getPassword(driver);
 		driver.get("https://rahulshettyacademy.com/locatorspractice/");

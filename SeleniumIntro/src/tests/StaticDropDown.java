@@ -9,8 +9,6 @@ import org.openqa.selenium.support.ui.Select;
 public class StaticDropDown {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
 		System.setProperty("webdriver.chrome.driver",
 				"/Users/khangnguyenhuynh/Desktop/Selenium/chromedriver_mac_arm64/chromedriver");
 		WebDriver driver = new ChromeDriver();

@@ -13,9 +13,17 @@ public class UpdatedDropdown {
 				"/Users/khangnguyenhuynh/Desktop/Selenium/chromedriver_mac_arm64/chromedriver");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://spicejet.com");
+		driver.get("http://spicejet.com"); // URL in the browser
 
-		driver.findElement(By.cssSelector("input[id*= 'SeniorCitizenDiscount'")).click();
-		System.out.println(driver.findElement(By.cssSelector("input[id*= 'SeniorCitizenDiscount'")).isSelected());
+		Assert.assertFalse(driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).isSelected());
+
+		// Assert.assertFalse(true);System.out.println(driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).isSelected());
+
+		driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).click();
+
+		System.out.println(driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).isSelected());
+
+		Assert.assertTrue(driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).isSelected());
 
 		// count the number of checkbox
 		System.out.println(driver.findElements(By.cssSelector("input[type='checkbox'")).size());

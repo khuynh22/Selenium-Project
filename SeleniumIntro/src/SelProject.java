@@ -24,23 +24,23 @@ public class SelProject implements WebDriver {
 		driver1.close();
 		driver1.quit();
 		
-		// Microsoft Edge browser
-		System.setProperty("webdriver.gecko.driver", "/Users/khangnguyenhuynh/Desktop/Selenium/msedgedriver");
-		WebDriver driver3 = new EdgeDriver();
-		driver3.get("https://www.khang-nguyen-huynh.com/");
-		System.out.println(driver3.getTitle());
-		System.out.println(driver3.getCurrentUrl());
-		driver3.close();
-		driver3.quit();
-		
-		// Firefox browser
-		System.setProperty("webdriver.gecko.driver", "/Users/khangnguyenhuynh/Downloads/geckodriver");
-		WebDriver driver2 = new FirefoxDriver();
-		driver2.get("https://www.khang-nguyen-huynh.com/");
-		System.out.println(driver2.getTitle());
-		System.out.println(driver2.getCurrentUrl());
-		driver2.close();
-		driver2.quit();
+//		// Microsoft Edge browser
+//		System.setProperty("webdriver.gecko.driver", "/Users/khangnguyenhuynh/Desktop/Selenium/msedgedriver");
+//		WebDriver driver3 = new EdgeDriver();
+//		driver3.get("https://www.khang-nguyen-huynh.com/");
+//		System.out.println(driver3.getTitle());
+//		System.out.println(driver3.getCurrentUrl());
+//		driver3.close();
+//		driver3.quit();
+//		
+//		// Firefox browser
+//		System.setProperty("webdriver.gecko.driver", "/Users/khangnguyenhuynh/Downloads/geckodriver");
+//		WebDriver driver2 = new FirefoxDriver();
+//		driver2.get("https://www.khang-nguyen-huynh.com/");
+//		System.out.println(driver2.getTitle());
+//		System.out.println(driver2.getCurrentUrl());
+//		driver2.close();
+//		driver2.quit();
 
 	}
 

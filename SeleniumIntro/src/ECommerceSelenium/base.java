@@ -17,7 +17,7 @@ public class base {
 		WebDriver driver = new ChromeDriver();
 
 		// expected checking Array
-		String[] items = { "Cucumber", "Brocolli", "Beetroot" };
+		String[] items = { "Cucumber", "Brocolli", "Beetroot", "Carrot"};
 		driver.get("https://rahulshettyacademy.com/seleniumPractise/");
 		Thread.sleep(3000);
 		List<WebElement> products = driver.findElements(By.cssSelector("h4.product-name"));
@@ -29,8 +29,8 @@ public class base {
 			if (itemsList.contains(name)) {
 				j++;
 				// click on "ADD TO CART"
-				driver.findElements(By.xpath("//button[text()='ADD TO CART']")).get(i).click();
-				if (j == 3) {
+				driver.findElements(By.xpath("//div[@class='product-action']/button")).get(i).click();
+				if (j == items.length) {
 					break;
 				}
 			}

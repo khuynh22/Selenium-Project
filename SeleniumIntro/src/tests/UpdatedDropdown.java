@@ -14,24 +14,16 @@ public class UpdatedDropdown {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://spicejet.com");
 		driver.get("http://spicejet.com"); // URL in the browser
-
+		
 		Assert.assertFalse(driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).isSelected());
-
 		// Assert.assertFalse(true);System.out.println(driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).isSelected());
-
 		driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).click();
-
 		System.out.println(driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).isSelected());
-
 		Assert.assertTrue(driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).isSelected());
-
 		// count the number of checkbox
 		System.out.println(driver.findElements(By.cssSelector("input[type='checkbox'")).size());
-
 		driver.findElement(By.id("divpaxinfo")).click();
-
 		Thread.sleep(2000L);
-
 		/*
 		 * int i=1;
 		 * 

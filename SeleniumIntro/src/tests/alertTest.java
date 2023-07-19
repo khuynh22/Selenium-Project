@@ -16,7 +16,6 @@ public class alertTest {
 		System.setProperty("webdriver.chrome.driver",
 				"/Users/khangnguyenhuynh/Desktop/Selenium/chromedriver_mac_arm64/chromedriver");
 		WebDriver driver = new ChromeDriver();
-		driver.get("http://spicejet.com"); // URL in the browser
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 		driver.findElement(By.id("name")).sendKeys(text);
 		driver.findElement(By.cssSelector("[id='alertbtn']")).click();

@@ -17,7 +17,7 @@ public class e2e {
 		driver.findElement(By.xpath("//a[@value='DEL']")).click();
 
 		Thread.sleep(2000);
-		
+
 		driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='MAA']"))
 				.click();
 		driver.findElement(By.cssSelector(".ui-state-default.ui-state-highlight.ui-state-active")).click();
@@ -29,7 +29,7 @@ public class e2e {
 
 		else {
 			Assert.assertTrue(false);
-			}
+		}
 
 		driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).click();
 		driver.findElement(By.id("divpaxinfo")).click();

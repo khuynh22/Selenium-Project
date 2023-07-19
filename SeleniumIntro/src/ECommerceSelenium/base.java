@@ -10,24 +10,29 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class base {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 
 		System.setProperty("webdriver.chrome.driver",
 				"/Users/khangnguyenhuynh/Desktop/Selenium/chromedriver_mac_arm64/chromedriver");
 		WebDriver driver = new ChromeDriver();
-	
-		//expected checking Array
-		String[] items = {"Cucumber", "Brocolli", "Beetroot"};
-		
-		driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
+
+		// expected checking Array
+		String[] items = { "Cucumber", "Brocolli", "Beetroot" };
+		driver.get("https://rahulshettyacademy.com/seleniumPractise/");
+		Thread.sleep(3000);
 		List<WebElement> products = driver.findElements(By.cssSelector("h4.product-name"));
+		int j = 0;
 		
 		for (int i = 0; i < products.size(); i++) {
-			String name = products.get(i).getText();
+			String name = products.get(i).getText().split("-")[0].trim();
 			List itemsList = Arrays.asList(items);
 			if (itemsList.contains(name)) {
+				j++;
 				// click on "ADD TO CART"
 				driver.findElements(By.xpath("//button[text()='ADD TO CART']")).get(i).click();
+				if (j == 3) {
+					break;
+				}
 			}
 		}
 

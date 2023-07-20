@@ -21,6 +21,9 @@ public class base {
 		driver.get("https://rahulshettyacademy.com/seleniumPractise/");
 		Thread.sleep(3000);
 		addItem(driver, items);
+		driver.findElement(By.cssSelector("img[alt='Cart']")).click();
+		driver.findElement(By.xpath("//button[contains(text(), 'PROCEED TO CHECKOUT')]")).click();
+		driver.findElement(By.cssSelector("input.promoCode")).sendKeys("rahulshettyacademy");
 	}
 
 	public static void addItem(WebDriver driver, String[] items) {

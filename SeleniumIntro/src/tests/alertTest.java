@@ -25,5 +25,4 @@ public class alertTest {
 		System.out.println(driver.switchTo().alert().getText());
 		driver.switchTo().alert().dismiss();
 	}
-
 }

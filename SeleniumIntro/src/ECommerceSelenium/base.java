@@ -17,12 +17,16 @@ public class base {
 		WebDriver driver = new ChromeDriver();
 
 		// expected checking Array
-		String[] items = { "Cucumber", "Brocolli", "Beetroot", "Carrot"};
+		String[] items = { "Cucumber", "Brocolli", "Beetroot", "Carrot" };
 		driver.get("https://rahulshettyacademy.com/seleniumPractise/");
 		Thread.sleep(3000);
+		addItem(driver, items);
+	}
+
+	public static void addItem(WebDriver driver, String[] items) {
 		List<WebElement> products = driver.findElements(By.cssSelector("h4.product-name"));
 		int j = 0;
-		
+
 		for (int i = 0; i < products.size(); i++) {
 			String name = products.get(i).getText().split("-")[0].trim();
 			List itemsList = Arrays.asList(items);
@@ -35,7 +39,6 @@ public class base {
 				}
 			}
 		}
-
 	}
 
 }

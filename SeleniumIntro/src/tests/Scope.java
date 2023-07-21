@@ -1,3 +1,5 @@
+package tests;
+
 import java.util.Iterator;
 import java.util.Set;
 
@@ -33,7 +35,7 @@ public class Scope {
 			coloumndriver.findElements(By.tagName("a")).get(i).sendKeys(clickonlinkTab);
 			Thread.sleep(5000L);
 		} // opens all the tabs
-		
+
 		Set<String> abc = driver.getWindowHandles();// 4
 		Iterator<String> it = abc.iterator();
 

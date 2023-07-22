@@ -13,7 +13,7 @@ public class calendar {
 				"/Users/khangnguyenhuynh/Desktop/Selenium/chromedriver_mac_arm64/chromedriver");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.path2usa.com/travel-companions");
-		driver.findElementByXPath(".//*[@id='travel_date']").click();
+		driver.findElement(By.xpath(".//*[@id='travel_date']")).click();
 
 		while (!driver.findElement(By.cssSelector("[class='datepicker-days'] [class='datepicker-switch']")).getText()
 				.contains("May")) {

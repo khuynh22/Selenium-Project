@@ -27,5 +27,10 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="/Users/khangnguyenhuynh/Downloads/testng-7.8.0.jar"/>
+	<classpathentry kind="lib" path="/Users/khangnguyenhuynh/Desktop/Selenium/commons-io-2.13.0/commons-io-2.13.0-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/khangnguyenhuynh/Desktop/Selenium/commons-io-2.13.0/commons-io-2.13.0-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/khangnguyenhuynh/Desktop/Selenium/commons-io-2.13.0/commons-io-2.13.0-test-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/khangnguyenhuynh/Desktop/Selenium/commons-io-2.13.0/commons-io-2.13.0-tests.jar"/>
+	<classpathentry kind="lib" path="/Users/khangnguyenhuynh/Desktop/Selenium/commons-io-2.13.0/commons-io-2.13.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

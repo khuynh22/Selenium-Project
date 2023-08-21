@@ -24,5 +24,4 @@ public class Miscelleanous {
 		FileUtils.copyFile(src, new File(
 				"/Users/khangnguyenhuynh/Desktop/Selenium/Selenium-Project/SeleniumIntro/src/tests/screenshot.png"));
 	}
-
 }

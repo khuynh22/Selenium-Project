@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -109,6 +109,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="JavaStream.test1" class="method navigator-link" hash-for-method="streamFilter">streamFilter</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="JavaStream.test1" class="method navigator-link" hash-for-method="streamMap">streamMap</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -143,12 +148,19 @@
                   <span class="method-name">streamFilter</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="streamMap">
+                  </a> <!-- streamMap -->
+                  <span class="method-name">streamMap</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/17/q32lqd_57csc73fc8ck6dp_80000gn/T/testng-eclipse-1939280038/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/17/q32lqd_57csc73fc8ck6dp_80000gn/T/testng-eclipse-1668096429/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -197,15 +209,19 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'regular')
 data.setCell(0, 2, 'JavaStream.test1')
-data.setCell(0, 3, 5);
+data.setCell(0, 3, 4);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'streamFilter')
 data.setCell(1, 2, 'JavaStream.test1')
-data.setCell(1, 3, 3);
+data.setCell(1, 3, 2);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'streamMap')
+data.setCell(2, 2, 'JavaStream.test1')
+data.setCell(2, 3, 2);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -243,7 +259,11 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">streamFilter</span>
-                <span class="method-start">6 ms</span>
+                <span class="method-start">5 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">streamMap</span>
+                <span class="method-start">8 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

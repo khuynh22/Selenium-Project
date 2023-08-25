@@ -5,7 +5,7 @@
     <classes>
       <class name="JavaStream.test1">
         <methods>
-          <include name="streamFilter"/>
+          <include name="streamMap"/>
         </methods>
       </class> <!-- JavaStream.test1 -->
     </classes>

@@ -28,6 +28,14 @@ public class LiveDemo {
 		//sort on the original list of step 3 -> sorted list
 		List<String> sortedList = originalList.stream().sorted().collect(Collectors.toList());
 		Assert.assertTrue(originalList.equals(sortedList));
+		
+		List<String> price = elementsList.stream().filter(s -> s.getText().contains("Beans")).map(s -> getPriceVeggie(s)).collect(Collectors.toList());
+		price.forEach(a -> System.out.println(a));
+		
 	}
-
+	
+	private static String getPriceVeggie(WebElement s) {
+		String priceValue = s.findElement(By.xpath("following-sibling::td[1]")).getText();
+		return priceValue;
+	}
 }

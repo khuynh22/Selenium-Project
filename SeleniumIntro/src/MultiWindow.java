@@ -30,8 +30,16 @@ public class MultiWindow {
 		driver.switchTo().window(parentWindowId);
 		WebElement name = driver.findElement(By.cssSelector("[name = 'name'"));
 		name.sendKeys(courseName);
+		
+		// Screen shot
 		File file = name.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(file, new File("logo.png"));
+		
+		// Get Height
+		System.out.println(name.getRect().getDimension().getHeight());
+		System.out.println(name.getRect().getDimension().getWidth());
+		
+		
 //		driver.quit();
 	}
 

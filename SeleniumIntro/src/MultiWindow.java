@@ -1,16 +1,19 @@
+import java.io.File;
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.Set;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class MultiWindow {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public static void main(String[] args) throws IOException {
 		System.setProperty("webdriver.chrome.driver",
 				"/Users/khangnguyenhuynh/Desktop/Selenium/chromedriver-mac-arm64/chromedriver");
 		WebDriver driver = new ChromeDriver();
@@ -22,9 +25,13 @@ public class MultiWindow {
 		String childWindow = it.next();
 		driver.switchTo().window(childWindow);
 		driver.get("https://rahulshettyacademy.com/");
-		String courseName = driver.findElements(By.cssSelector("a[href*='https://courses.rahulshettyacademy.com/p']")).get(1).getText();
+		String courseName = driver.findElements(By.cssSelector("a[href*='https://courses.rahulshettyacademy.com/p']"))
+				.get(1).getText();
 		driver.switchTo().window(parentWindowId);
-		driver.findElement(By.cssSelector("[name = 'name'")).sendKeys(courseName);
+		WebElement name = driver.findElement(By.cssSelector("[name = 'name'"));
+		name.sendKeys(courseName);
+		File file = name.getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(file, new File("logo.png"));
 //		driver.quit();
 	}
 

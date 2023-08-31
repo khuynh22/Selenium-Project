@@ -3,7 +3,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class SelProject implements WebDriver {
+public abstract class SelProject implements WebDriver {
 
 	public static void main(String[] args) {
 		// Invoking Browser
